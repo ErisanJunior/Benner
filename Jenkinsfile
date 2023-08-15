@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Move Build to /mnt/Teste') {
             steps {
-                sh 'cp /var/jenkins_home/workspace/PrimeiroJob/ /mnt/Teste/BuildMove'
+                sh 'cp -r /var/jenkins_home/workspace/PrimeiroJob/ /mnt/Teste/BuildMove'
             }
         }
         
