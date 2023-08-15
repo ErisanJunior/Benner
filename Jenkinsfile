@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                sh 'cd /home/testeMove'
                 checkout scm
             }
         }
