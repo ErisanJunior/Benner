@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
+        stage('Checkout do Git e Build') {
             steps {
                 checkout scm
             }
         }
-        stage('Move Build to /mnt/Teste') {
+        stage('Deploy Arquivos') {
             steps {
                 sh 'mv /var/jenkins_home/workspace/PrimeiroJob/ /mnt/Teste/BuildMove'
             }
