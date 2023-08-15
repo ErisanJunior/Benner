@@ -10,14 +10,13 @@ pipeline {
         
         stage('Build') {
             steps {
-                bat 'dotnet build' // Ou use 'sh' se estiver no Linux
+                sh 'dotnet build'
             }
         }
         
-        stage('Move Build to E:\\Teste') {
+        stage('Move Build to /mnt/Teste') {
             steps {
-                // Mover o resultado do build para a pasta "E:\Teste"
-                bat 'move .\\<caminho\\do\\arquivo> E:\\Teste' // Ou use 'mv' se estiver no Linux
+                sh 'mv ./<caminho/do/arquivo> /mnt/Teste'
             }
         }
     }
